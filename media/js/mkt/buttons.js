@@ -67,8 +67,12 @@
             } else if (z.nav.platform == 'windows') {
                 $installed.show();
                 $installed.find('.how.win').show();
-            } else {
-                // Linux? You're on your own, brah.
+            } else if (z.nav.platform == "linux") {
+                $installed.show();
+                $installed.find('.how.linux').show();
+            }
+            else {
+                // Other platforms
             }
         }
         setButton($button, gettext('Installed'), 'installed');
